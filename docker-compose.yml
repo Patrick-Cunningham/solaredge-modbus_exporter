@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  solaredge:
+    build: .
+    environment:
+      - SOLAREDGE_HOST=<YOUR INVERTER IP HERE>
+    command: >
+      /bin/sh -c 'python solaredgeModbusExporter.py'
